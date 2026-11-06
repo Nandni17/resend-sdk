@@ -42,6 +42,20 @@ RESEND_APIKEY=your_resend_api_key
 
 Never commit your API key to Git.
 
+## Quickstart
+
+```ts
+import { ResendSDK } from 'resend-sdk'
+
+const client = new ResendSDK({
+  apikey: process.env.RESEND_APIKEY,
+})
+
+const emails = await client.Email().list({
+  limit: 10,
+})
+```
+
 ## Usage
 
 Import and initialize the SDK:

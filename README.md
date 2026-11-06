@@ -1,4 +1,4 @@
-# Resend TypeScript SDK
+﻿# Resend TypeScript SDK
 
 An unofficial TypeScript SDK for the [Resend API](https://resend.com), generated using [Voxgig SDK Generator](https://voxgig.com/sdk).
 
@@ -46,7 +46,7 @@ Never commit your API key to Git.
 
 Import and initialize the SDK:
 
-```typescript
+```ts
 import { ResendSDK } from 'resend-sdk'
 
 const client = new ResendSDK({
@@ -56,7 +56,7 @@ const client = new ResendSDK({
 
 ## Send an email
 
-```typescript
+```ts
 async function sendEmail() {
   try {
     const email = await client.Email().create({
@@ -79,7 +79,7 @@ Use a sender address or domain verified in your Resend account.
 
 ## List emails
 
-```typescript
+```ts
 async function listEmails() {
   try {
     const emails = await client.Email().list({
@@ -95,7 +95,7 @@ async function listEmails() {
 
 ## Retrieve an email
 
-```typescript
+```ts
 async function getEmail(emailId: string) {
   try {
     const email = await client.Email().load({

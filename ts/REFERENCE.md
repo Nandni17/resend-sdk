@@ -1,4 +1,4 @@
-# Resend TypeScript SDK Reference
+﻿# Resend TypeScript SDK Reference
 
 Complete API reference for the Resend TypeScript SDK.
 
@@ -1207,7 +1207,7 @@ const api_key = client.ApiKey()
 | `id` | `string` | No | The ID of the API key. |
 | `last_used_at` | `string | null` | No | The date and time the API key was last used. |
 | `name` | `string` | Yes | The API key name. |
-| `permission` | `string` | No | The API key can have full access to Resend’s API or be only restricted to send emails. |
+| `permission` | `string` | No | The API key can have full access to Resendâ€™s API or be only restricted to send emails. |
 
 ### Field Usage by Operation
 
@@ -1399,7 +1399,7 @@ remaining keys are sent as that action's payload.
 | `stop` | `/automations/{automation_id}/stop` | `client.Automation().create({ $action: 'stop', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Automation record — check the API definition for its shape.
+Automation record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Automation().create({
@@ -1565,7 +1565,7 @@ remaining keys are sent as that action's payload.
 | `runs` | `/automations/{automation_id}/runs` | `client.AutomationRunListItem().list({ $action: 'runs', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-AutomationRunListItem record — check the API definition for its shape.
+AutomationRunListItem record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.AutomationRunListItem().list({
@@ -1778,7 +1778,7 @@ remaining keys are sent as that action's payload.
 | `send` | `/broadcasts/{id}/send` | `client.Broadcast().create({ $action: 'send', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Broadcast record — check the API definition for its shape.
+Broadcast record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Broadcast().create({
@@ -2113,7 +2113,7 @@ remaining keys are sent as that action's payload.
 | `topics` | `/contacts/{contact_id}/topics` | `client.ContactTopicsResponseSuccess().list({ $action: 'topics', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-ContactTopicsResponseSuccess record — check the API definition for its shape.
+ContactTopicsResponseSuccess record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.ContactTopicsResponseSuccess().list({
@@ -2382,7 +2382,7 @@ remaining keys are sent as that action's payload.
 | `verify` | `/domains/{domain_id}/verify` | `client.Domain().create({ $action: 'verify', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Domain record — check the API definition for its shape.
+Domain record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Domain().create({
@@ -2613,7 +2613,7 @@ remaining keys are sent as that action's payload.
 | `share` | `/emails/{email_id}/share` | `client.Email().create({ $action: 'share', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Email record — check the API definition for its shape.
+Email record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Email().create({
@@ -2630,6 +2630,9 @@ Create a new entity with the given data.
 
 ```ts
 const result = await client.Email().create({
+  from: 'Your Name <sender@example.com>',
+  to: 'recipient@example.com',
+  subject: 'Hello from Resend',
 })
 ```
 
@@ -2771,7 +2774,7 @@ remaining keys are sent as that action's payload.
 | `send` | `/events/send` | `client.Event().create({ $action: 'send', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Event record — check the API definition for its shape.
+Event record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Event().create({
@@ -2888,7 +2891,7 @@ remaining keys are sent as that action's payload.
 | `agent` | `/inboxes/{inbox_id}/agent` | `client.Inbox().update({ $action: 'agent', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Inbox record — check the API definition for its shape.
+Inbox record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Inbox().update({
@@ -2998,7 +3001,7 @@ remaining keys are sent as that action's payload.
 | `agent` | `/inboxes/{inbox_id}/agent` | `client.InboxAgentResponseSuccess().list({ $action: 'agent', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-InboxAgentResponseSuccess record — check the API definition for its shape.
+InboxAgentResponseSuccess record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.InboxAgentResponseSuccess().list({
@@ -3078,7 +3081,7 @@ remaining keys are sent as that action's payload.
 | `drafts` | `/inboxes/{inbox_id}/drafts` | `client.InboxDraftListItem().list({ $action: 'drafts', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-InboxDraftListItem record — check the API definition for its shape.
+InboxDraftListItem record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.InboxDraftListItem().list({
@@ -3162,7 +3165,7 @@ remaining keys are sent as that action's payload.
 | `send` | `/inboxes/{inbox_id}/drafts/{draft_id}/send` | `client.InboxDraftResponseSuccess().create({ $action: 'send', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-InboxDraftResponseSuccess record — check the API definition for its shape.
+InboxDraftResponseSuccess record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.InboxDraftResponseSuccess().create({
@@ -3451,7 +3454,7 @@ remaining keys are sent as that action's payload.
 | `reply` | `/inboxes/{inbox_id}/threads/{thread_id}/emails/{email_id}/reply` | `client.InboxThreadEmailResponseSuccess().create({ $action: 'reply', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-InboxThreadEmailResponseSuccess record — check the API definition for its shape.
+InboxThreadEmailResponseSuccess record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.InboxThreadEmailResponseSuccess().create({
@@ -5338,7 +5341,7 @@ remaining keys are sent as that action's payload.
 | `publish` | `/templates/{id}/publish` | `client.Template().create({ $action: 'publish', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-Template record — check the API definition for its shape.
+Template record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.Template().create({
@@ -6572,7 +6575,7 @@ remaining keys are sent as that action's payload.
 | `replay` | `/webhooks/{webhook_id}/events/{event_id}/replay` | `client.WebhookEvent().create({ $action: 'replay', ... })` |
 
 An action returns that action's OWN response, which is not necessarily a
-WebhookEvent record — check the API definition for its shape.
+WebhookEvent record â€” check the API definition for its shape.
 
 ```ts
 const result = await client.WebhookEvent().create({
@@ -6687,4 +6690,5 @@ its default unless you name it.
 - Installs the BASE transport that the wrapping features wrap, so it must be
   activated before them.
 - Inactive by default: leaving it out costs nothing at runtime.
+
 

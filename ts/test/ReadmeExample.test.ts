@@ -10,7 +10,7 @@ import { ResendSDK } from '..'
 
 function findFirstTsBlock(md: string, sectionHeading: string): string | null {
   const escapedHeading = sectionHeading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  const re = new RegExp('##\\s+' + escapedHeading + '[\\s\\S]*?```ts\\n([\\s\\S]*?)```')
+  const re = new RegExp('##\\s+' + escapedHeading + '[\\s\\S]*?```ts\\r?\\n([\\s\\S]*?)```')
   const m = md.match(re)
   return m ? m[1] : null
 }
